@@ -11,8 +11,6 @@
 		C17D0ED0281FA27C00E83B82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D0ECF281FA27C00E83B82 /* ContentView.swift */; };
 		C17D0ED2281FA28000E83B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17D0ED1281FA28000E83B82 /* Assets.xcassets */; };
 		C17D0ED5281FA28000E83B82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17D0ED4281FA28000E83B82 /* Preview Assets.xcassets */; };
-		C17D0ED7281FA28000E83B82 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D0ED6281FA28000E83B82 /* Persistence.swift */; };
-		C17D0EDA281FA28000E83B82 /* SharedSchedule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C17D0ED8281FA28000E83B82 /* SharedSchedule.xcdatamodeld */; };
 		C17D0EE4281FA28000E83B82 /* SharedScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D0EE3281FA28000E83B82 /* SharedScheduleTests.swift */; };
 		C17D0EEE281FA28000E83B82 /* SharedScheduleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D0EED281FA28000E83B82 /* SharedScheduleUITests.swift */; };
 		C17D0EF0281FA28000E83B82 /* SharedScheduleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D0EEF281FA28000E83B82 /* SharedScheduleUITestsLaunchTests.swift */; };
@@ -41,8 +39,6 @@
 		C17D0ECF281FA27C00E83B82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C17D0ED1281FA28000E83B82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C17D0ED4281FA28000E83B82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C17D0ED6281FA28000E83B82 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		C17D0ED9281FA28000E83B82 /* SharedSchedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SharedSchedule.xcdatamodel; sourceTree = "<group>"; };
 		C17D0EDF281FA28000E83B82 /* SharedScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17D0EE3281FA28000E83B82 /* SharedScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedScheduleTests.swift; sourceTree = "<group>"; };
 		C17D0EE9281FA28000E83B82 /* SharedScheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedScheduleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,8 +97,6 @@
 				C17D0ECD281FA27C00E83B82 /* SharedScheduleApp.swift */,
 				C17D0ECF281FA27C00E83B82 /* ContentView.swift */,
 				C17D0ED1281FA28000E83B82 /* Assets.xcassets */,
-				C17D0ED6281FA28000E83B82 /* Persistence.swift */,
-				C17D0ED8281FA28000E83B82 /* SharedSchedule.xcdatamodeld */,
 				C17D0ED3281FA28000E83B82 /* Preview Content */,
 			);
 			path = SharedSchedule;
@@ -263,10 +257,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C17D0ED7281FA28000E83B82 /* Persistence.swift in Sources */,
 				C17D0ED0281FA27C00E83B82 /* ContentView.swift in Sources */,
 				C17D0ECE281FA27C00E83B82 /* SharedScheduleApp.swift in Sources */,
-				C17D0EDA281FA28000E83B82 /* SharedSchedule.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SharedSchedule/Preview Content\"";
+				DEVELOPMENT_TEAM = 68LU7Q7XD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -453,6 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SharedSchedule/Preview Content\"";
+				DEVELOPMENT_TEAM = 68LU7Q7XD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -585,19 +579,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C17D0ED8281FA28000E83B82 /* SharedSchedule.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C17D0ED9281FA28000E83B82 /* SharedSchedule.xcdatamodel */,
-			);
-			currentVersion = C17D0ED9281FA28000E83B82 /* SharedSchedule.xcdatamodel */;
-			path = SharedSchedule.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = C17D0EC2281FA27C00E83B82 /* Project object */;
 }
