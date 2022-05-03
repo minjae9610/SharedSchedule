@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C1106B54282115A800252BC2 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1106B53282115A800252BC2 /* Tab.swift */; };
+		C176C916282126810032F510 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C176C915282126810032F510 /* ScheduleModel.swift */; };
 		C17D0ECE281FA27C00E83B82 /* SharedScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D0ECD281FA27C00E83B82 /* SharedScheduleApp.swift */; };
 		C17D0ED0281FA27C00E83B82 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D0ECF281FA27C00E83B82 /* BaseView.swift */; };
 		C17D0ED2281FA28000E83B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17D0ED1281FA28000E83B82 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		C1106B53282115A800252BC2 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		C176C915282126810032F510 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		C17D0ECA281FA27C00E83B82 /* SharedSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17D0ECD281FA27C00E83B82 /* SharedScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedScheduleApp.swift; sourceTree = "<group>"; };
 		C17D0ECF281FA27C00E83B82 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C1106B552821257600252BC2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C1106B562821258C00252BC2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C176C915282126810032F510 /* ScheduleModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C17D0EC1281FA27C00E83B82 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +131,8 @@
 				C17D0ECD281FA27C00E83B82 /* SharedScheduleApp.swift */,
 				C1106B53282115A800252BC2 /* Tab.swift */,
 				C1106B522820FBCE00252BC2 /* Views */,
+				C1106B552821257600252BC2 /* ViewModels */,
+				C1106B562821258C00252BC2 /* Models */,
 				C17D0ED3281FA28000E83B82 /* Preview Content */,
 			);
 			path = SharedSchedule;
@@ -274,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C176C916282126810032F510 /* ScheduleModel.swift in Sources */,
 				C17D0F3E281FBA8F00E83B82 /* ProfileView.swift in Sources */,
 				C17D0ED0281FA27C00E83B82 /* BaseView.swift in Sources */,
 				C1106B54282115A800252BC2 /* Tab.swift in Sources */,
