@@ -82,6 +82,7 @@
 		C1106B522820FBCE00252BC2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C17D0ECF281FA27C00E83B82 /* BaseView.swift */,
 				C176C919282250BD0032F510 /* Schedule Views */,
 				C176C91A282250D70032F510 /* Profile Views */,
 			);
@@ -138,7 +139,6 @@
 				C17D0ED1281FA28000E83B82 /* Assets.xcassets */,
 				C17D0ECD281FA27C00E83B82 /* SharedScheduleApp.swift */,
 				C1106B53282115A800252BC2 /* Tab.swift */,
-				C17D0ECF281FA27C00E83B82 /* BaseView.swift */,
 				C1106B522820FBCE00252BC2 /* Views */,
 				C1106B562821258C00252BC2 /* Models */,
 				C17D0ED3281FA28000E83B82 /* Preview Content */,
