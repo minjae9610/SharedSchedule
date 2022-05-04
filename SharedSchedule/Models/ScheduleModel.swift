@@ -5,13 +5,32 @@
 //  Created by 김민재 on 2022/05/03.
 //
 
-import SwiftUI
+import Foundation
 
-struct Schedule: Identifiable {
+class ScheduleListStore: ObservableObject {
+    @Published var Schedules: [ScheduleModel] = []
+}
+
+struct ScheduleModel: Codable, Identifiable {
     var id = UUID()
-    var scheduleName: String
+    var name: String
+    var description: String
     var meetingLocation: String
     var startTime: Date
     var endTime: Date
-    let participants: [String: Image]
+    let participants: [String]
+    
+    init(name: String, createUserName: String, description: String, meetingLocation: String, startTime: Date, endTime: Date) {
+        self.name = name
+        self.description = description
+        self.meetingLocation = meetingLocation
+        self.startTime = startTime
+        self.endTime = endTime
+        self.participants = [createUserName]
+    }
+    
+    func data() -> Data? {
+        let encoder = JSONEncoder()
+        return try? encoder.encode(self)
+    }
 }
