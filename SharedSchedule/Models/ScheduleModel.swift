@@ -13,6 +13,7 @@ class ScheduleListStore: ObservableObject {
 
 struct ScheduleModel: Codable, Identifiable {
     var id = UUID()
+    var isMeIn : Bool = false
     var name: String
     var description: String
     var meetingLocation: String

@@ -2,32 +2,50 @@
 //  ScheduleView.swift
 //  SharedSchedule
 //
-//  Created by 김민재 on 2022/05/02.
+//  Created by 김민재 on 2022/05/04.
 //
 
 import SwiftUI
 
 struct ScheduleView: View {
+    let schedule: ScheduleModel
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(1...100, id: \.self) { count in
-                    HStack{
-                        Button(action: {}, label: {
-                            Image("largecircle.fill.circle")
-                                .foregroundColor(Color.gray)
-                        })
-                        Text("\(Date())")
-                    }
-                }
+        List {
+            HStack {
+                Label(
+                    title: {
+                        Text("Due Date")
+                            .font(.headline)
+                    },
+                    icon: {
+                        Image(systemName: "calendar")
+                    })
+                Spacer()
+                Text("\(schedule.startTime, formatter: DateFormatter.dueDateFormatter)")
             }
-            .navigationBarTitle("Schedule")
+            HStack {
+                Label(
+                    title: {
+                        Text("Payout")
+                            .font(.headline)
+                    },
+                    icon: {
+                        Image(systemName: "creditcard")
+                    })
+                Spacer()
+                Text(schedule.name)
+            }
         }
+        .listStyle(InsetGroupedListStyle())
+        .navigationTitle(schedule.name)
     }
 }
 
+#if DEBUG
 struct ScheduleView_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleView()
+        ScheduleView(schedule: ScheduleModel(name: "배드민턴 치실분?", createUserName: "Robin", description: "토요일 오후 8시 배드민턴", meetingLocation: "체육관", startTime: Date(), endTime: Date()))
     }
 }
+#endif

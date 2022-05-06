@@ -28,7 +28,7 @@ enum Tab: CaseIterable {
     @ViewBuilder
     var view: some View {
         switch self {
-        case .schedule: ScheduleView()
+        case .schedule: ScheduleListView()
         case .profile: ProfileView()
         }
     }
