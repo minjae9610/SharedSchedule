@@ -12,7 +12,7 @@ struct ScheduleListView: View {
         NavigationView {
             ScrollViewReader { proxy in
                 ScrollView {
-                    ForEach(1...100, id: \.self) { count in
+                    ForEach(1...5, id: \.self) { count in
                         ScheduleRowView(schedule: ScheduleModel(name: "배드민턴 치실분?", createUserName: "Robin", description: "토요일 오후 8시 배드민턴", meetingLocation: "체육관", startTime: Date(), endTime: Date()))
                             .background(Color.white)
                             .cornerRadius(80)
@@ -21,12 +21,19 @@ struct ScheduleListView: View {
                             .shadow(radius: 3)
                     }
                     
-                    Button ("top") {
+                    Button(action: {
                         withAnimation {
                             proxy.scrollTo(1)
                         }
+                    }) {
+                        Image(systemName: "chevron.up.circle")
+                            .imageScale(.large)
+                            .font(.title2)
+                            .foregroundColor(.gray)
                     }
+                    .buttonStyle(.plain)
                 }
+                .background(Color(red: 240, green: 240, blue: 240))
             }
             .navigationBarTitle("Schedule")
         }
