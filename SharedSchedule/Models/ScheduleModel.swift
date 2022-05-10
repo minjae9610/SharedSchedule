@@ -11,7 +11,7 @@ class ScheduleListStore: ObservableObject {
     @Published var Schedules: [ScheduleModel] = []
 }
 
-struct ScheduleModel: Codable, Identifiable {
+struct ScheduleModel: Codable, Identifiable, Hashable {
     var id = UUID()
     var isMeIn : Bool = false
     var name: String

@@ -15,8 +15,8 @@ struct ScheduleRowView: View {
             HStack {
                 UserImage
                 VStack(alignment: .leading) {
-                        Text(schedule.name)
-                            .font(.title)
+                    Text(schedule.name)
+                        .font(.title)
                     Text("\(schedule.startTime, formatter: DateFormatter.dueDateFormatter) ~ \(schedule.endTime, formatter: DateFormatter.dueDateFormatter)")
                         .font(.caption)
                 }
@@ -30,7 +30,8 @@ struct ScheduleRowView: View {
 
 private extension ScheduleRowView {
     var UserImage: some View {
-        ScheduleListProfileImage(image: Image("robinProfileImage"))    }
+        ScheduleListProfileImage(image: Image("robinProfileImage"))
+    }
 }
 
 #if DEBUG

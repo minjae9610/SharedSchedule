@@ -9,32 +9,82 @@ import SwiftUI
 
 struct ScheduleView: View {
     let schedule: ScheduleModel
+    @State private var showModal = false
     
     var body: some View {
         List {
             HStack {
                 Label(
                     title: {
-                        Text("Due Date")
+                        Text("Description")
                             .font(.headline)
                     },
                     icon: {
-                        Image(systemName: "calendar")
+                        Image(systemName: "text.justify")
+                    })
+                Spacer()
+                Text("\(schedule.description)")
+            }
+            
+            HStack {
+                Label(
+                    title: {
+                        Text("Location")
+                            .font(.headline)
+                    },
+                    icon: {
+                        Image(systemName: "location.circle")
+                    })
+                Spacer()
+                Text("\(schedule.meetingLocation)")
+            }
+            
+            HStack {
+                Label(
+                    title: {
+                        Text("Start Time")
+                            .font(.headline)
+                    },
+                    icon: {
+                        Image(systemName: "clock")
                     })
                 Spacer()
                 Text("\(schedule.startTime, formatter: DateFormatter.dueDateFormatter)")
             }
+            
             HStack {
                 Label(
                     title: {
-                        Text("Payout")
+                        Text("End Time")
                             .font(.headline)
                     },
                     icon: {
-                        Image(systemName: "creditcard")
+                        Image(systemName: "clock.fill")
                     })
                 Spacer()
-                Text(schedule.name)
+                Text("\(schedule.endTime, formatter: DateFormatter.dueDateFormatter)")
+            }
+
+            Button(action: {
+                self.showModal = true
+            }){
+                HStack {
+                    Label(
+                        title: {
+                            Text("Participants")
+                                .font(.headline)
+                        },
+                        icon: {
+                            Image(systemName: "person.crop.circle.fill")
+                        })
+                    Spacer()
+                    ForEach(schedule.participants, id: \.self) { participant in
+                        Text("\(participant)")
+                    }
+                }
+                .sheet(isPresented: self.$showModal) {
+                    ScheduleParticipantsView(participants: schedule.participants)
+                }
             }
         }
         .listStyle(InsetGroupedListStyle())

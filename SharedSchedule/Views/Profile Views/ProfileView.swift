@@ -9,7 +9,24 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text("Hello, Profile!")
+        VStack {
+            UserProfileImage
+            HStack {
+                VStack {
+                    Text("Robin")
+                        .font(.title)
+                    Text("010-2604-5339")
+                }
+            }
+        }
+    }
+}
+
+private extension ProfileView {
+    var UserProfileImage: some View {
+        ProfileImage(image: Image("robinProfileImage"))
+            .offset(y: -130)
+            .padding(.bottom, -130)
     }
 }
 
